@@ -1,0 +1,432 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+img {
+	display: block;
+}
+
+header.menu {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: calc(50vh - 50px);
+	background-color: rgba(200, 15, 46, .8);
+	width: 100vw;
+	height: 100px;
+	z-index: 2;
+	padding-left: 100px;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header img{
+	width: 50px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav a {
+	text-decoration: none;
+	color: rgba(29, 66, 137, .7);
+	font-size: 1.2em;
+	padding: 10px 20px; /* relleno */
+	position: relative;
+	transition: all .3s;
+	margin: 0 10px;
+	font-weight: 700;
+}
+
+nav a:hover {
+	color: white;
+}
+
+/* enalces del menu */
+
+nav a::before, nav a::after {
+	opacity: 0;
+	color: white;
+	font-size: 1.5em;
+	top: 4px;
+	transition: all .3s;
+}
+
+nav a::before {
+	content: "("; /* necesarios para existir */
+	position: absolute;
+	left: 0;
+	transform: translateX(-10px);
+}
+
+nav a:hover::before, nav a:hover::after{
+	opacity: 1;
+	color: white;
+	font-size: 1.5em;
+	transform: translateX(0);
+}
+
+nav a::after {
+	content: ")";
+	right: 0;
+	position: absolute;
+	transform: translateX(10px);
+}
+
+/* enlaces del menu */
+
+section {
+	height: 100vh;
+	width: 100%;
+	padding-left: 100px;
+	display: grid;
+	grid-template: repeat(2, 1fr);
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	row-gap: 100px;
+	background-color: white;
+}
+
+/* fondos */
+
+#uno::before{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("../images/fondo-01.jpg") no-repeat top center / cover;
+	opacity: .2;
+	z-index: -1;
+}
+
+#dos::before{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("../images/fondo-02.jpg") no-repeat center center / cover;
+	opacity: .2;
+	z-index: -1;
+}
+
+#tres::before{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("../images/fondo-03.jpg") no-repeat center center / cover;
+	opacity: .2;
+	z-index: -1;
+}
+
+/* fondos */
+
+/* imagenes leyendas */
+
+#tres div:last-child {
+	display: grid;
+	grid-template: auto 10px / repeat(3, 200px);
+	height: 40vh;
+	column-gap: 70px;
+	align-content: center;
+}
+
+#tres div:last-child img {
+	border: 5px double #C80F2E;
+	padding: 10px;
+	max-width: 120%;
+	max-height: 120%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: all .5s;
+}
+
+#tres div:last-child p {
+	font-size: 1.3em;
+	color: #1D4289;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+#tres div:last-child img:hover {
+	filter: grayscale(0);
+}
+
+/* imagenes leyendas */
+
+/* textos */
+
+h1 {
+	color: #C80F2E;
+	font-weight: 900;
+	font-size: 3.5em;
+}
+
+h2{
+	font-weight: 700;
+	font-size: em;
+	color: #1D4289;
+}
+
+p {
+	color: gray;
+	line-height: 1.5em;
+	margin-top: 10px;
+}
+
+/* textos */
+
+#uno img {
+	width: 30vh;
+}
+
+#dos img {
+	width: 40%;
+	margin: 20px 0;
+	padding: 10px;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+}
+
+/* parrafos */
+
+.info {
+	width: 80%;
+	max-width: 1000px;
+}
+
+/* parrafos */
+
+/* enlaces paginas */
+
+.info a {
+	color: #1D4289;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.info a:hover {
+	color: #C80F2E;
+}
+
+/* enlaces paginas */
+
+#uno, #dos:target, #tres:target {
+	z-index: 1;
+}
+
+/* pagina bird */
+
+#bird {
+	display: grid;
+	grid-template: 75px auto / repeat(2, 1fr);
+	align-items: start;
+	align-content: center;
+	gap: 40px;
+}
+
+#bird::before {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("../images/bird-02.jpg") no-repeat right top / cover;
+	opacity: .2;
+	z-index: -1;
+}
+
+#bird img {
+	padding: 10px;
+	border: 5px double red;
+}
+
+#bird h1 {
+	grid-column: span 2;
+}
+
+#bird .info {
+	width: 100%;
+}
+
+/* pagina bird */
+
+/* reglas para el menu hamburguesa. */
+
+header.birdH {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+.abrir {
+	display: block;
+	appearance: none;
+	-webkit-appearance:none;
+	background-color: transparent;
+	border: 1px solid #C80F2E;
+	border-radius: 5px;
+	width: 30px;
+	padding: 5px 5px 0;
+	cursor: pointer;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	transition: all .5s;
+}
+
+.abrir:hover {
+	background-color: #C80F2E;
+}
+
+.abrir span{
+	display: block;
+	height: 2px;
+	background-color: #C80F2E;
+	margin-bottom: 5px;
+}
+
+.abrir:hover span {
+	background-color: white;
+}
+
+.hamb {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: #1D4289;
+	flex-direction: column;
+	opacity: .8;
+	display: none;
+}
+
+.hamb ul {
+	display: block;
+	text-align: center;
+}
+
+.hamb li:not(:first-child) {
+	margin-top: 40px;
+}
+
+.hamb a {
+	color: rgba(255, 255, 255, .8);
+	font-size: 3em;
+	padding: 20px 30px; /* relleno */
+}
+
+.cerrar {
+	display: none;
+}
+
+.cerrar{
+	display: block;
+	appearance: none;
+	-webkit-appaerance:none;
+	border: none;
+	background-color: transparent;
+	color: rgba(255, 255, 255, .8);
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.cerrar:hover {
+	color: white;
+}
+
+.desplegado{
+	display: flex;
+} 
+
+.blur {
+	filter: blur(4px);
+}
+
+/* menu hamburguesa */
+
+/* media quaeris (responsive) */
+
+@media screen and (max-width:1200px){
+	#bird {
+		display: block;
+		height: 100%;
+		padding-left: 100px;
+		padding-top: 200px;
+		padding-bottom: 40px;
+		position: static;
+		background-color: transparent;
+	}
+
+	#bird::before {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	#bird img{
+		margin-top: 20px;
+	}
+
+	#bird .info{
+		width: 60%;
+		margin-top: 20px;
+	}
+
+	.abrir {
+		left: calc(100% - 100px);
+	}
+}
+
+@media screen and (max-width:900px){
+	#tres div:last-child {
+		display: grid;
+		grid-template: auto 10px / repeat(3, 30%);
+		height: 40vh;
+		column-gap: 40px;
+		align-content: center;
+		align-items: start;
+	}
+
+	#tres div:last-child img {
+		max-width: 80%;
+		max-height: 80%;
+	}
+
+	#tres div:last-child p {
+		font-size: .8em;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
