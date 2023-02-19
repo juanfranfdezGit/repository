@@ -417,16 +417,53 @@ header.birdH {
 
 }
 
+@media screen and (max-width: 380px) { /* MOVIL */
+	
+	/* MENU MOVIL */
+	header.menu {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		position: fixed;
+		top: 0;
+		background-color: rgba(200, 15, 46);
+		width: 80vw;
+		height: 70px;
+		z-index: 2;
+		padding-left:0px;
+		font-size: .75em;
+		margin-top: 10px;
+		padding-top: 10px;
+	}
+	/* MENU MOVIL */
 
+	/* EFECTO SOBRE ENLACES */
+	
+		nav a::before {
+			content: "";
+		}
+	
+		nav a::after {
+			content: "";
+		}
+	/* EFECTO SOBRE ENLACES */
+		#uno {
+			display: flex;
+			padding-left: 0;
+			position: absolute;
+			row-gap: 0;
+		}
 
+		#uno p{
+			font-size: .8em;
+		}
 
+		#uno h1{
+			font-size: 1.7em;
+		}
 
+		#uno img{
+			margin-top: 100px;
+		}
 
-
-
-
-
-
-
-
-
+	}
