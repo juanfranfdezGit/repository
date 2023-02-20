@@ -417,7 +417,7 @@ header.birdH {
 
 }
 
-@media screen and (max-width: 380px) { /* MOVIL */
+@media screen and (max-width: 400px) { /* MOVIL */
 	
 	/* MENU MOVIL */
 	header.menu {
@@ -437,6 +437,18 @@ header.birdH {
 		padding-top: 10px;
 		border-radius: 15px;
 	}
+
+	nav a {
+		text-decoration: none;
+		color: rgba(29, 66, 137, .7);
+		font-size: 1em;
+		padding: 10px 20px; /* relleno */
+		position: relative;
+		transition: all .3s;
+		margin: 20px;
+		font-weight: 700;
+}
+
 	/* MENU MOVIL */
 
 	/* EFECTO SOBRE ENLACES */
