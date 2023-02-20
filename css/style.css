@@ -430,10 +430,12 @@ header.birdH {
 		width: 80vw;
 		height: 70px;
 		z-index: 2;
-		padding-left:0px;
+		padding-left:0;
 		font-size: .75em;
 		margin-top: 10px;
+		margin-left: 10px;
 		padding-top: 10px;
+		border-radius: 15px;
 	}
 	/* MENU MOVIL */
 
