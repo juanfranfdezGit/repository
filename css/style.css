@@ -423,7 +423,7 @@ header.birdH {
 	header.menu {
 		display: flex;
 		justify-content: center;
-		align-items: start;
+		align-items: center;
 		position: fixed;
 		top: 0;
 		background-color: rgba(200, 15, 46);
