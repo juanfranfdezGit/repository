@@ -452,7 +452,6 @@ header.birdH {
 	/* MENU MOVIL */
 
 	/* EFECTO SOBRE ENLACES */
-	
 		nav a::before {
 			content: "";
 		}
@@ -461,6 +460,8 @@ header.birdH {
 			content: "";
 		}
 	/* EFECTO SOBRE ENLACES */
+
+	/* PAGINA UNO */
 		#uno {
 			display: flex;
 			padding-left: 0;
@@ -479,5 +480,9 @@ header.birdH {
 		#uno img{
 			margin-top: 100px;
 		}
-
 	}
+	/* PAGINA UNO */
+
+	/* PAGINA DOS */
+
+	/* PAGINA DOS */
