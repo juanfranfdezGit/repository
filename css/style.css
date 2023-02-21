@@ -428,13 +428,13 @@ header.birdH {
 		top: 0;
 		background-color: rgba(200, 15, 46);
 		width: 80vw;
-		height: 70px;
+		height: 10vh;
 		z-index: 2;
 		padding-left:0;
 		font-size: .75em;
-		margin-top: 10px;
-		margin-left: 10px;
-		padding-top: 10px;
+		margin-top: 1em;
+		margin-left: 1em;
+		padding-top: .5em;
 		border-radius: 15px;
 	}
 
@@ -442,10 +442,10 @@ header.birdH {
 		text-decoration: none;
 		color: rgba(29, 66, 137, .7);
 		font-size: 1em;
-		padding: 10px 20px; /* relleno */
+		padding: 1em 2em; /* relleno */
 		position: relative;
 		transition: all .3s;
-		margin: 20px;
+		margin: 1.5em;
 		font-weight: 700;
 }
 
